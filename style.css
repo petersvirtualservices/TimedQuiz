@@ -1,0 +1,14 @@
+h1{
+font-family: 'Fontdiner Swanky', cursive;
+text-align: center;
+padding: 50px;
+}
+h2{
+font-family: 'Quantico', sans-serif;
+text-align: center;
+}
+.answer{
+font-family: 'Amatic SC', cursive;
+width: 50%;
+margin: 0 auto;
+}
