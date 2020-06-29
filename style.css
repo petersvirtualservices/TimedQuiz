@@ -31,3 +31,22 @@ nav{
     background-color: orange;
   }
 
+  p{
+    font-family: 'Amatic SC', cursive;
+    font-size: 32px;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding:10px;
+  }
+
+  #ProgressBackground {
+    width: 50%;
+    background-color: lightgray;
+    margin: 0 auto;
+  }
+  
+  #Progress {
+    width: 1%;
+    height: 30px;
+    background-color: blue;
