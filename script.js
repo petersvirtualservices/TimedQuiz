@@ -8,23 +8,52 @@
 
 // .innerHTML to change questions
 
-/* var question = document.getElementById("question");
-var correct = document.getElementById("right");
-var wrong = document.getElemntbyId("wrong"); */
+/* var question = document.getElementById(question);
+var correct = document.getElementById(right);
+var wrong = document.getElemntbyId(wrong);
+var answersCorrect = docment.getElementById(answers);
+var answerSet = 
+
+var questionChange = function(){
+if (correct === true) {
+  document.getElementsByClassName(questionWhole).setAttribute("click", "question[i]");
+  document.getElementsByClassName(questionWhole).setAttribute("click", "answerSet[i]");
+  answerCorrect++;
+}
+else{
+  document.getElementsByClassName(questionWhole).setAttribute("click", "question[i]");
+  document.getElementsByClassName(questionWhole).setAttribute("click", "answerSet[i]");
+
+}
+} */
 
 // ************* TIMER STUFF ********************
 // Need to add 'Adding 3 seconds' for wrong answers
+var questionsRight = 3;
+
 
 function timeLeft() {
+  //document.querySelectorAll("p").setAttribute("click", ) = " ";
   var movementPlaceholder = document.getElementById("Progress");
   var movement = 0;
   var final = setInterval(timeToMove, 600);
   function timeToMove() {
     if (movement >= 100) {
       clearInterval(final);
-    } else {
+    } 
+    else{
       movement++;
       movementPlaceholder.style.width = movement + '%';
     }
+    if(questionsRight === 10 && movement >= 100){
+      window.location.href = "winner.html";
+    }
+    else if(questionsRight < 10 && movement >= 100){
+      window.location.href ="loser.html";
+    }
+
   }
 }
+
+
+  

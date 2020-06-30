@@ -42,9 +42,10 @@
     <br><br>
 
 
-    <p>Hey...</p>
-    <p>Directions are simple: read the question, get it right, become a winner; get the question wrong, and three seconds is subtracted from your score.</p>
-    <p>Oh... and you have only 60 seconds to do so.</p>
+    <p onclick="timeLeft()">Hey...</p>
+    <p onclick="timeLeft()">Directions are simple: read the question, get 10 right, become a winner.  Each time you get a question wrong, 3 seconds is subtracted from the time you have left.</p>
+    <br>
+    <p onclick="timeLeft()">Oh... and you have only 60 seconds to get 10 questions right.</p>
     
         <button type="button" class="btn btn-success answer">Correct!</button>
         <button type="button" class="btn btn-danger answer">Wrong!</button>
@@ -63,7 +64,8 @@
 
     <button type="button" class="btn btn-primary btn-lg btn-block answer">Block level button</button>
 
-
+    <div id="winner"></div>
+    <div id="loser"></div>
     </script>
 </body>
 

@@ -13,11 +13,11 @@ h2{
     margin: 0 auto;
     font-size: 30px;
     display: block;
+    text-align: center;
 }
 
 a{
     font-family: 'Amatic SC', cursive;
-    float: right;
     font-size: 30px;
     font-style:bold;
 }
