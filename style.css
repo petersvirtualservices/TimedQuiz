@@ -42,11 +42,11 @@ nav{
 
   #ProgressBackground {
     width: 50%;
-    background-color: lightgray;
+    background-color: blue;
     margin: 0 auto;
   }
   
   #Progress {
     width: 1%;
     height: 30px;
-    background-color: blue;
+    background-color: lightgray;
