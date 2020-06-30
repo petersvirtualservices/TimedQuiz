@@ -33,7 +33,7 @@ var questionsRight = 3;
 
 
 function timeLeft() {
-  //document.querySelectorAll("p").setAttribute("click", ) = " ";
+  document.getElementById("removeIntro").innerText = "";
   var movementPlaceholder = document.getElementById("Progress");
   var movement = 0;
   var final = setInterval(timeToMove, 600);
