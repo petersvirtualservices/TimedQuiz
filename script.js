@@ -6,29 +6,30 @@ function beginGame() {
 }
 //  ************* QUESTION STUFF ********************
 
-var question = ["What is a typical abbreviation for Javascript? - JS", "What kind of styles does Javascript support? - Event-Driven, Functional, Imperative", "What was Javascript's original name? - LiveScript", "What does console.log() do? - It prints the result to the console log.", "What is the right way to declare a variable? - var name = 'Whatever';", "Why would you want to use var rather than const? - When you want to change a variable, you will use var.", "Why would you want to use const as a variable declaration? - When you want to ensure that the variable stays the same.", "Why would you use a while loop? - You want to run a loop until a condition has been satisfied.", "Why would you run a for loop? - You would want to run a loop while a certain condition is true."];
+var question = ["What is a typical abbreviation for Javascript? - JS", "What kind of styles does Javascript support? - Event-Driven, Functional, Imperative", "What was Javascript's original name? - LiveScript", "What does console.log() do? - It prints the result to the console log.", "What is the right way to declare a variable? - var name = 'Whatever';", "Why would you want to use var rather than const? - When you want to change a variable, you will use var.", "Why would you want to use const as a variable declaration? - When you want to ensure that the variable stays the same.", "Why would you use a while loop? - You want to run a loop until a condition has been satisfied.", "Why would you run a for loop? - You would want to run a loop while a certain condition is true.", "Which element should you use to indicate that Javascript is being used? - script"];
 //.element.textContent()
+// question = [Question to Ask, Right/Wrong1: Answer, Right/Wrong2: Answer, Right/Wrong3: Answer, Right/Wrong4: Answer]
+// split the questions by comma?
 var correct = document.getElementById(right);
 var wrong = document.getElemntbyId(wrong);
 var questionsRight = docment.getElementById(answers);
 var answerSet = 
 
-/* var questionChange = function(){
+function questionChange(){
 if (correct === true) {
-  document.getElementsByClassName(questionWhole).setAttribute("click", "question[i]");
-  document.getElementsByClassName(questionWhole).setAttribute("click", "answerSet[i]");
+  document.getElementsByClassName(question).setAttribute("click", "question[i]");
+  document.getElementsByClassName(answerChoice).setAttribute("click", "answerSet[i]");
   questionsRight++;
 }
 else{
-  document.getElementsByClassName(questionWhole).setAttribute("click", "question[i]");
-  document.getElementsByClassName(questionWhole).setAttribute("click", "answerSet[i]");
-
+  document.getElementsByClassName(question).setAttribute("click", "question[i]");
+  document.getElementsByClassName(answerChoice).setAttribute("click", "answerSet[i]");
 }
-} */
+}
 
 // ************* TIMER STUFF ********************
 // Need to add 'Adding 3 seconds' for wrong answers
-var questionsRight = 3;
+var questionsRight = 10;
 
 function timeLeft() {
   var movementPlaceholder = document.getElementById("Progress");
@@ -84,3 +85,6 @@ function sendMessage() {
 
 setTime();
  */
+
+ // Create code to write to local server for highscores.html
+ // 
