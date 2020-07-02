@@ -46,24 +46,24 @@
     <br><br>
     Directions are simple: read the question, get 10 right, become a winner.  Each time you get a question wrong, 3 seconds is subtracted from the time you have left.
     <br><br>
-    Oh... and you have only 60 seconds to get 10 questions right.</p>
+    Oh... and you have only 30 seconds to get 10 questions right.</p>
     
-        <button type="button" class="btn btn-success answer">Correct!</button>
-        <button type="button" class="btn btn-danger answer">Wrong!</button>
+        <button type="button" class="btn btn-success answer change">Correct!</button>
+        <button type="button" class="btn btn-danger answer change">Wrong!</button>
 
     <br>
-    <h2>Question Goes Here</h2>
+    <h2 onclick="questionChange()" id="question" class = "change"></h2>
 
     <br>
    
 
-    <button type="button" id="answerChoice" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer">Block level button</button>
+    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
 
-    <button type="button" id="answerChoice" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer">Block level button</button>
+    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
 
-    <button type="button" id="answerChoice" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer">Block level button</button>
+    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
 
-    <button type="button" id="answerChoice" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer">Block level button</button>
+    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
 
     <div id="winner"></div>
     <div id="loser"></div>
