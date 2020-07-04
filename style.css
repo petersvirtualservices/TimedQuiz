@@ -7,15 +7,29 @@ h2{
     font-family: 'Quantico', sans-serif;
     text-align: center;
 }
-.answer{
-    font-family: 'Amatic SC', cursive;
-    width: 50%;
-    margin: 0 auto;
-    font-size: 30px;
+
+.questionHere{
+  font-family: 'Quantico', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background: orange;
+  color: blue;
+  border-radius: 15px;
+  width:50%;
+  margin: 0 auto;
+}
+#start{
+    width:15%;
+    font-family: 'Quantico', sans-serif;
+    margin: 5px auto;
+    font-size: 20px;
     display: block;
     text-align: center;
+    border-width: 10px;
+    border-color: orange;
+    background-color: blue;
+    color:white;
 }
-
 a{
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
@@ -34,14 +48,19 @@ nav{
   p{
     font-family: 'Amatic SC', cursive;
     font-size: 32px;
-    width: 50%;
     display: block;
     margin: 0 auto;
     padding:10px;
+    border-radius:15px;
+    color:orange;
+    background-color:blue;
+    text-align:center;
+    width: 50%;
+
   }
 
   #ProgressBackground {
-    width: 50%;
+    width: 25%;
     background-color: blue;
     margin: 0 auto;
   }
@@ -50,3 +69,21 @@ nav{
     width: 1%;
     height: 30px;
     background-color: lightgray;
+  }
+
+table{
+    margin: 0 auto;
+    font-family: 'Amatic SC', cursive;
+    font-size: 32px;
+    width: 50%;
+    text-align: center;
+  }
+
+  .answers {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-style:bold;
+  }
