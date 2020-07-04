@@ -7,13 +7,12 @@ function beginGame() {
 //  ************* QUESTION STUFF ********************
 
 let currentQuestionIndex = 0;
-const start = document.getElementById("start");
-const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
 const choiceD = document.getElementById("D");
+var questionsRight = 0;
 
 let questions = [
   { question: "What is a typical abbreviation for Javascript?", choiceA: "JS", choiceB: "Java", choiceC: "JSS", choiceD: "Java1", correct: "A" },
@@ -36,6 +35,7 @@ let questions = [
   { question: "What is the purpose of the &ltalt&gt element?", choiceA: "To provide text if the image cannot be displayed.", choiceB: "To create a hyperlink.", choiceD: "To resize the image.", choiceC: "To create a gif from the image.", correct: "A" },
   { question: "SVG used what code?", choiceA: "CSS", choiceB: "HTML", choiceC: "Java", choiceD: "JavaScript", correct: "A" },
   { question: "What is the purpose of Javascript?", choiceA: "To provide functionality to a website.", choiceB: "To offer a base for a website.", choiceC: "To add style to a website.", choiceD: "It does not have a purpose.", correct: "A" },
+  { question: "What letter choice were all the correct answers?", choiceA: "A", choiceB: "B", choiceC: "C", choiceD: "D", correct: "A" },
 ];
 
 function questionChange() {
@@ -51,7 +51,6 @@ function questionChange() {
 /// ***************Check Answer***************
 function checkAnswer(answer) {
   if (answer == questions[currentQuestionIndex].correct) {
-    let questionsRight = 0;
     questionsRight++;
   }
   if (currentQuestionIndex < questions.length - 1) {
@@ -115,13 +114,14 @@ function timeLeft() {
       movement++;
       movementPlaceholder.style.width = movement + '%';
     }
-    if (questionsRight >= 10 && movement >= 100) {
+    if (questionsRight === 10) {
       var winnerCircle = prompt("Great Job!  How would you like to be known on the leader board?");
       document.getElementById("winnerNameHere") = winnerCircle;
       windows.location.href = "winner.html";
     }
-    else {
+    else if (movement >= 100) {
       alert("Sorry Champ, Maybe Next Time.")
+      windows.location.href = "index.html";
     }
 
   }
