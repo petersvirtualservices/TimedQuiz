@@ -6,7 +6,6 @@ function beginGame() {
 }
 //  ************* QUESTION STUFF ********************
 
-// select all elements
 let currentQuestionIndex = 0;
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
@@ -15,8 +14,6 @@ const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
 const choiceD = document.getElementById("D");
-
-// create our questions
 
 let questions = [
   { question: "What is a typical abbreviation for Javascript?", choiceA: "JS", choiceB: "Java", choiceC: "JSS", choiceD: "Java1", correct: "A" },
