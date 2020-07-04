@@ -10,15 +10,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <!--JavaScript-->
-    <script src="script.js">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light"></navclass>
+    <nav class="navbar navbar-light">
         <h1> Webbie</h1>
         <a href="index.html"> Play The Game</a>
         <a href="howtoplay.html"> How to Play</a>
@@ -35,39 +27,28 @@
     <br><br><br>
 
     <div id="ProgressBackground">
-  <div id="Progress"></div>
-</div>
+        <div id="Progress"></div>
+    </div>
 
-     <button class="btn answer" id="start" onclick="beginGame()">Start The Game</button>
+    <button class="btn answer" id="start" onclick="beginGame()">Start The Game</button>
     <br><br>
 
 
-    <p id = "removeIntro" onclick="beginGame()">Hey...
-    <br><br>
-    Directions are simple: read the question, get 10 right, become a winner.  Each time you get a question wrong, 3 seconds is subtracted from the time you have left.
-    <br><br>
-    Oh... and you have only 30 seconds to get 10 questions right.</p>
-    
-        <button type="button" class="btn btn-success answer change">Correct!</button>
-        <button type="button" class="btn btn-danger answer change">Wrong!</button>
+    <p id="removeIntro" onclick="beginGame()">Hey...
+        <br><br>
+        Directions are simple: read the question, get 10 right, become a winner. Each time you get a question wrong, 3
+        seconds is subtracted from the time you have left.
+        <br><br>
+        Oh... and you have only 30 seconds to get 10 questions right.
+    </p>
 
     <br>
-    <h2 onclick="questionChange()" id="question" class = "change"></h2>
 
-    <br>
-   
+    <div class="change"></div>
 
-    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
+    <!--JavaScript-->    
+    <script src="script.js"></script>
 
-    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
-
-    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
-
-    <button type="button" id="answer" onclick="questionChange()" class="btn btn-primary btn-lg btn-block answer change"></button>
-
-    <div id="winner"></div>
-    <div id="loser"></div>
-    </script>
 </body>
 
 </html>
