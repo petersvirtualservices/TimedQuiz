@@ -78,9 +78,9 @@ function timeLeft() {
     }
     if (questionsRight === 10) {
       clearTimeout(final);
-      var winnerCircle = prompt("Great Job!  How do you want to be known on the leaderboard?");
-      if (winnerCircle !== null) {
-        window.location.replace("highscores.html");
+      var winnerCircle = confirm("Great Job!  Now, we will talk a walk to the scoreboard, champ.");
+      if (winnerCircle === true || winnerCircle === false) {
+        window.location.replace("winner.html");
       }
       document.getElementById("winnerCircle").addEventListener("click", function () {
         document.getElementById("winnerCircle").innerHTML = winnerCircle

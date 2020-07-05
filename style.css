@@ -84,3 +84,8 @@ table{
     font-size: 30px;
     font-style:bold;
   }
+
+form{
+    display: block;
+    margin: 0 auto;
+  }

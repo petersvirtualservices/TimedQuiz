@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--CSS Stylesheets-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fontdiner+Swanky&family=Quantico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar navbar-light">
+            <h1> Webbie</h1>
+            <a href="index.html"> Play The Game</a>
+            <a href="howtoplay.html"> How to Play</a>
+            <a href="highscores.html">High Scores</a>
+        </nav>
+        <br><br><br>
+
+        <h2>Great Job, Champ!</h2>
+
+        <p>Now, write your name on the leaderboard:</p>
+
+        <form method="POST">
+            <div class="WinnerCircle">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Greatest of All Time" />
+            </div>
+              <div id="msg"></div>
+            <button id="submit">Let Everyone Know</button>
+          </form>
+
+          <table>
+            <tr><td><u>Name</u></td><td><u>Score</u></td></tr>
+            <tr><td id="winnerNameHere"></td><td>1,000,001</tr>
+            <tr><td>Bob</td><td>1,000,000</tr>
+            <tr><td>Jane</td><td>1,000,000</tr>
+            <tr><td>Tom</td><td>1,000,000</tr>
+           
+            </table>
+        
+        
+         <!--JavaScript-->
+         <script src="script2.js"></script>
+         <script src="script.js"></script>
+  
+        </div>
+        </body>
+        </html>
