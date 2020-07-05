@@ -53,38 +53,16 @@ function checkAnswer(answer) {
   if (answer == questions[currentQuestionIndex].correct) {
     questionsRight++;
   }
+  else {
+    var movement = movement - 3;
+    currentQuestionIndex++;
+  }
   if (currentQuestionIndex < questions.length) {
     currentQuestionIndex++;
     questionChange();
   }
 }
-
-
-/* function questionChange() {
-  var changeQuestion = document.getElementsByClassName("change")[0];
-
-  changeQuestion.innerHTML = '';
-
- for (var i = 0; i <= questions[currentQuestionIndex]; i++) {
-    var pInnerText = document.createElement("p");
-    pInnerText.innerText = questions[currentQuestionIndex].question;
-    document.getElementsByTagName("p")[0].appendChild(pInnerText);
-  }
-  
-  document.createElement("button").addEventListener("click", function () {
-    if (currentQuestionIndex != questions.length - 1) {
-      currentQuestionIndex += 1;
-      startQuestion();
-    } else {
-
-    }
-    document.getElementById("change").appendChild(button);
-  });
-} */
-
 // ************* TIMER STUFF ********************
-// Need to add 'Adding 3 seconds' fornswers
-// var questionsRight = 10;
 
 function timeLeft() {
   var movementPlaceholder = document.getElementById("Progress");
@@ -99,18 +77,19 @@ function timeLeft() {
       movementPlaceholder.style.width = movement + '%';
     }
     if (questionsRight === 10) {
-      var winnerCircle = confirm("Great Job!  Now, head over to the leaderboard to put your name on there.");
-      if (winnerCircle === true || winnerCircle === false ) {
-        clearTimeout(final);
-        window.location.replace("highscores.html"); 
+      clearTimeout(final);
+      var winnerCircle = prompt("Great Job!  How do you want to be known on the leaderboard?");
+      if (winnerCircle !== null) {
+        window.location.replace("highscores.html");
       }
-    else if (movement >= 100) {
+      document.getElementById("winnerCircle").addEventListener("click", function () {
+        document.getElementById("winnerCircle").innerHTML = winnerCircle
+      })
+      if (questionsRight < 10 && movement >= 100) {
         var loserCircle = confirm("Sorry Champ, Maybe Next Time.");
-        if (loserCircle === true ||loserCircle === false ) {
-          window.location.replace("index.html"); 
-        }
-        else {
-          window.location.replace("index.html"); 
+        if (loserCircle === true || loserCircle === false) {
+          clearTimeout(final);
+          window.location.replace("index.html");
         }
       }
     }
