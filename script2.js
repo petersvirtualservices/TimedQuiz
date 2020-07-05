@@ -1,33 +1,18 @@
-var nameInput = document.querySelector("#winnerNameHere");
+var nameElem = document.querySelector('#name');
+var buttonElem = document.querySelector('#submit');
+var tableNameElem = document.querySelector('#winnerNameHere');
 
-winnerCircle();
+// listen for click events on the submit button
+buttonElem.addEventListener('click', function() {
+// store the value of the user-specified name
+var name = nameElem.value;
+// store the user name in local storage
+localStorage.setItem('name', name);
+// set the user name in the table
+tableNameElem.innerHTML = name;
+})
 
-function displayMessage(type, message) {
-  msgDiv.textContent = message;
-  msgDiv.setAttribute("class", type);
+var name = localStorage.getItem('name');
+if (name !== null) {
+tableNameElem.innerHTML = name;
 }
-
-function winnerCircle() {
-  var name = localStorage.getItem("name");
-
-  if (!name) {
-    return ("You will never know.");
-  }
-
-  nameInput.textContent = name;
-}
-
-signUpButton.addEventListener("click", function(event) {
-  event.preventDefault();
-
-  var name = document.querySelector("#name").value;
-
-  if (name === "") {
-    displayMessage("error", "Fine. Have it your way.");
-   } else {
-    displayMessage("success", "Bask in the wonderfulness of winning.");
-
-    localStorage.setItem("email", name);
-    winnerCircle();
-  }
-});
