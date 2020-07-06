@@ -88,4 +88,18 @@ table{
 form{
     display: block;
     margin: 0 auto;
+    text-align: center;
+  }
+
+  #submit{
+    width:15%;
+    font-family: 'Quantico', sans-serif;
+    margin: 5px auto;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    border-width: 10px;
+    background-color: blue;
+    border-radius: 15px;
+    color:white;
   }
