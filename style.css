@@ -103,3 +103,14 @@ form{
     border-radius: 15px;
     color:white;
   }
+
+  #rightwrong{
+    background-color: yellow;
+    width:15%;
+    font-family: 'Quantico', sans-serif;
+    margin: 5px auto;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    color: blue;
+  }

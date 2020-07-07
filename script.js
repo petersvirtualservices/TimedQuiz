@@ -52,10 +52,12 @@ function questionChange() {
 function checkAnswer(answer) {
   if (answer == questions[currentQuestionIndex].correct) {
     questionsRight++;
+    document.getElementById("rightwrong").innerText='Correct!';
   }
   else {
     var movement = movement - 3;
     currentQuestionIndex++;
+    document.getElementById("rightwrong").innerText='Wrong!';
   }
   if (currentQuestionIndex < questions.length) {
     currentQuestionIndex++;
