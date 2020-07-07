@@ -51,17 +51,21 @@ function questionChange() {
 /// ***************Check Answer***************
 function checkAnswer(answer) {
   if (answer == questions[currentQuestionIndex].correct) {
+    document.getElementById("rightwrong").innerText = 'Correct!';
     questionsRight++;
-    document.getElementById("rightwrong").innerText='Correct!';
   }
   else {
     var movement = movement - 3;
+    document.getElementById("rightwrong").innerText = 'Wrong!';
     currentQuestionIndex++;
-    document.getElementById("rightwrong").innerText='Wrong!';
   }
   if (currentQuestionIndex < questions.length) {
     currentQuestionIndex++;
     questionChange();
+  }
+  else {
+    var loserCircle = confirm("Sorry Champ, Maybe Next Time.");
+    window.location.replace("index.html");
   }
 }
 // ************* TIMER STUFF ********************
@@ -87,7 +91,7 @@ function timeLeft() {
       document.getElementById("winnerCircle").addEventListener("click", function () {
         document.getElementById("winnerCircle").innerHTML = winnerCircle
       })
-      if (questionsRight < 10 && movement >= 100) {
+      if (questionsRight < 10 && movement == 100) {
         var loserCircle = confirm("Sorry Champ, Maybe Next Time.");
         if (loserCircle === true || loserCircle === false) {
           clearTimeout(final);
