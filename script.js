@@ -49,14 +49,15 @@ function questionChange() {
 }
 
 /// ***************Check Answer***************
+
 function checkAnswer(answer) {
   if (answer == questions[currentQuestionIndex].correct) {
     document.getElementById("rightwrong").innerText = 'Correct!';
-    document.getElementById("score").innerHTML = questionsRight+1;
+    document.getElementById("score").innerHTML = questionsRight + 1;
     questionsRight++;
   }
   else {
-    var movement = movement - 3;
+    var movement = movement + 3;
     document.getElementById("rightwrong").innerText = 'Wrong!';
     currentQuestionIndex++;
   }
@@ -72,18 +73,21 @@ function checkAnswer(answer) {
 // ************* TIMER STUFF ********************
 
 function timeLeft() {
-  var movementPlaceholder = document.getElementById("Progress");
   var movement = 0;
-  var final = setInterval(timeToMove, 300);
-  
-  
+  var final = setInterval(timeToMove, 1000);
+  var timePlaceholder = document.getElementById("timeHere");
+
   function timeToMove() {
     if (movement >= 100) {
       clearInterval(final);
     }
     else {
       movement++;
-      movementPlaceholder.style.width = movement + '%';
+      timePlaceholder.innerText = 30 - movement;
+    }
+    if (30 - movement === 0) {
+      clearTimeout(final);
+      timePlaceholder.innerText = "Sorry Champ, Maybe Next Time. Refresh The Page to Try Again."
     }
     if (questionsRight === 10) {
       clearTimeout(final);
@@ -94,13 +98,6 @@ function timeLeft() {
       document.getElementById("winnerCircle").addEventListener("click", function () {
         document.getElementById("winnerCircle").innerHTML = winnerCircle
       })
-      if (questionsRight < 10 && movement == 100) {
-        var loserCircle = confirm("Sorry Champ, Maybe Next Time.");
-        if (loserCircle === true || loserCircle === false) {
-          clearTimeout(final);
-          window.location.replace("index.html");
-        }
-      }
     }
   }
 }
